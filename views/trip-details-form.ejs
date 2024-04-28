@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #555545;
+            color: #97704f;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ccccc4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #555;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trip details Form</h1>
+        <form action="/submit-trip" method="POST">
+            <label for="tripno">Trip Number:</label>
+            <input type="number" id="tripno" name="tripno" required>
+        
+            <label for="date">Date:</label>
+            <input type="text" id="date" name="date" required>
+        
+            <label for="busno">Bus Number:</label>
+            <input type="number" id="busno" name="busno" required>
+        
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" required>
+        
+            <label for="fro">From:</label>
+            <input type="text" id="fro" name="fro" required>
+        
+            <label for="noofseats">Number of Seats:</label>
+            <input type="number" id="noofseats" name="noofseats" required>
+        
+            <input type="submit" value="Submit">
+        </form>
+        
+    </div>
+</body>
+</html>

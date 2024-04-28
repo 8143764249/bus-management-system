@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #555545;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 50%;
+            background-color: #ccccc4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #97704f;
+        }
+
+        h1 {
+            text-align: center;
+            color: #97704f;
+        }
+
+        .details {
+            margin-top: 20px;
+        }
+
+        .details p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Driver Details</h1>
+        <% if (driverDetails) { %>
+            <div class="details">
+                <p><strong>drivername:</strong> <%= driverDetails.drivername %></p>
+                <p><strong>licenseno:</strong> <%=driverDetails.licenseno %></p>
+                <p><strong>phone:</strong> <%= driverDetails.phone %></p>
+                <p><strong>Age:</strong> <%= driverDetails.Age %></p>
+                <p><strong>experience:</strong> <%= driverDetails.experience %></p>
+            </div>
+        <% } else { %>
+            <p class="error">driver not found</p>
+        <% } %>
+    </div>
+</body>
+</html>
